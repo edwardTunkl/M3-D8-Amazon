@@ -70,7 +70,21 @@
         </div>
       </nav>
       <div class="container">
-
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Name</th>
+              <th scope="col">Brand</th>
+              <th scope="col">Price</th>
+              <th scope="col">Image</th>
+              <th scope="col">Description</th>
+            </tr>
+          </thead>
+          <tbody class="tableData">
+           
+          </tbody>
+        </table>
       </div>
 
 <script>
@@ -94,12 +108,28 @@
             // recievedData = JSON.parse(json)
 
             console.log(data)
+            
+            const table = document.querySelector(".container")
+             for (s of data) {
+   
+              table.innerHTML+= `
+                 <tr>
+                   <th scope="row">1</th>
+                   <td>${s.name} </td>
+                   <td>${s.brand}</td>
+                   <td>${s.price}</td>
+                   <td>${s.imageUrl}</td>
+                   <td>${s.description}</td>
+                 </tr>
+              `
+            }
 
         } catch (err) {
             console.log("THIS IS ERROR",err);
         } finally {
             console.log("Hello, I`m the end!")
          }
+
         }
 
 
