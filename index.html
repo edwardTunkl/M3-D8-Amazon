@@ -70,6 +70,7 @@
         </div>
       </nav>
       <div class="container">
+        <br><br><br>
         <table class="table">
           <thead>
             <tr>
@@ -109,12 +110,12 @@
 
             console.log(data)
             
-            const table = document.querySelector(".container")
+            const table = document.querySelector(".tableData")
              for (s of data) {
    
               table.innerHTML+= `
                  <tr>
-                   <th scope="row">1</th>
+                   <th scope="row">${data.indexOf(s)}</th>
                    <td>${s.name} </td>
                    <td>${s.brand}</td>
                    <td>${s.price}</td>
