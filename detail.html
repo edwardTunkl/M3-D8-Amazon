@@ -34,6 +34,7 @@
     </nav>
 
     <div class="container">
+     
       <br><br>
       <div class="detail-container" style="width: 650px;">
         <div class="spinner-border" role="status">
@@ -86,8 +87,8 @@
             
             detailContainer = document.querySelector(".detail-container")
             detailContainer.innerHTML = `
-                      <div class="card">
-                      <img src="${productData.imageUrl}" class="card-img-top" alt="...">
+                      <div class="card" style="width: 300px;">
+                      <img src="${productData.imageUrl}" class="card-img-top" style="height: 250px; width: 200px;" alt="...">
                       <div class="card-body">
                         <h5 class="card-title">${productData.name}</h5>
                         <p class="card-text">${productData.description}</p>
@@ -98,13 +99,9 @@
                         <li class="list-group-item">CREATED: ${productData.createdAt}</li>
                         <li class="list-group-item">UPDATED: ${productData.updatedAt}</li>
                       </ul>
-                      <div class="card-body">
-                        <a href="#" class="card-link">Card link</a>
-                        <a href="#" class="card-link">Another link</a>
-                      </div>
-                      </div>
-                      <button type="submit" class="btn btn-success ml-auto" onclick="editFunction()">Edit</button>
-                      <button type="submit" class="btn btn-danger ml-auto" onclick="deleteFunction(event)">Delete</button>
+                      
+                      <button type="submit" class="btn btn-success" onclick="editFunction()">Edit</button>
+                      <button type="submit" class="btn btn-danger" onclick="deleteFunction(event)">Delete</button>
 
                       `
           }
