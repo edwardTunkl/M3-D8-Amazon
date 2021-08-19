@@ -108,7 +108,7 @@
                       <div class="form-group">
                         <label for="description">Description</label>
                         <textarea class="form-control description" value="${productData.description}" id="description" rows="3"
-                        required placeholder="text here"></textarea>
+                        required placeholder="text here">${productData.description}</textarea>
                       </div>
                       <button type="submit" class="btn btn-primary">Submit</button>
                       <button type="submit" class="btn btn-success ml-auto" onclick="editFunction(event)">Edit</button>
@@ -116,9 +116,9 @@
 
                       `
           }
-        }catch (err) {
+        } catch (err) {
           console.log(err)
-        }finally {
+        } finally {
           console.log("Hi")
         }
       }
@@ -176,7 +176,7 @@
 
           let productData = {
               name: document.getElementById("name").value,
-              brand: document.getElementById("description").value,
+              brand: document.getElementById("brand").value,
               price: document.getElementById("price").value,
               imageUrl: document.getElementById("imageUrl").value,
               description: document.getElementById("description").value
