@@ -113,7 +113,7 @@
           <tbody class="tableData">
            
           </tbody>
-        </table>
+        </table><a href=""></a>
       </div>
 
 <script>
@@ -144,12 +144,12 @@
               table.innerHTML+= `
                  <tr>
                    <th scope="row">${data.indexOf(s)}</th>
-                   <td>${s.name} </td>
+                   <td><a href="detail.html?id=${s._id}">${s.name}</a></td>
                    <td>${s.brand}</td>
                    <td>${s.price}</td>
                    <td>${s.imageUrl}</td>
                    <td>${s.description}</td>
-                   <td><a href="backOffice.html?id=${s._id} ">EDIT</a></td>
+                   <td><a href="backOffice.html?id=${s._id}">EDIT</a></td>
                  </tr>
               `
             }
@@ -162,10 +162,10 @@
 
         }
 
-        const editFunction = function(id) {
-          console.log("I AM ID" + id)
-          window.location.assign("./backoffice.html?id=" + id)
-         }
+        // const editFunction = function(id) {
+        //   console.log("I AM ID" + id)
+        //   window.location.assign("./backoffice.html?id=" + id)
+        //  }
         
 
 
